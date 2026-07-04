@@ -1,0 +1,89 @@
+# ==========================================
+# WAXAL ASR Challenge - Project Data
+# ==========================================
+# Ignore everything inside data and submissions...
+/data/*
+/submissions/*
+
+# ...BUT keep the folder structure in Git! 
+# (You will need to run: touch data/.keep submissions/.keep to make this work)
+!/data/.keep
+!/submissions/.keep
+
+# If you end up using DVC (Data Version Control), allow Git to track the pointer files
+!/data/**/*.dvc
+!/data/**/.gitignore
+
+# ==========================================
+# Machine Learning & Deep Learning
+# ==========================================
+# Model weights and checkpoints (Whisper, Wav2Vec2, etc.)
+*.ckpt
+*.pt
+*.pth
+*.h5
+*.bin
+*.safetensors
+/checkpoints/
+/saved_models/
+/models_cache/
+
+# Hugging Face & Audio Caches
+.huggingface/
+.cache/
+
+# Experiment Tracking Logs (TensorBoard, Weights & Biases)
+/wandb/
+/logs/
+/tensorboard/
+/runs/
+/tb_logs/
+
+# ==========================================
+# Credentials & Secrets (CRITICAL)
+# ==========================================
+# NEVER commit your Hugging Face, W&B, or Google Drive API tokens!
+.env
+*.env
+secret_keys.json
+credentials.json
+
+# ==========================================
+# Python & Environments
+# ==========================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environments
+venv/
+env/
+.venv/
+miniconda/
+miniforge/
+
+# ==========================================
+# Jupyter Notebooks
+# ==========================================
+.ipynb_checkpoints/
+
+# ==========================================
+# OS & Editor Specific
+# ==========================================
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+
+# IDEs (VS Code, PyCharm, etc.)
+.vscode/
+.idea/
+*.swp
+*.swo
